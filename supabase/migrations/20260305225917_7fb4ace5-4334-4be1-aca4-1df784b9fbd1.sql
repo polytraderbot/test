@@ -1,0 +1,1 @@
+ALTER TABLE public.assets ADD COLUMN IF NOT EXISTS technical_data jsonb DEFAULT NULL;

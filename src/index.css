@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 225 40% 7%;
+    --foreground: 210 20% 90%;
+
+    --card: 225 35% 10%;
+    --card-foreground: 210 20% 90%;
+
+    --popover: 225 35% 10%;
+    --popover-foreground: 210 20% 90%;
+
+    --primary: 185 80% 55%;
+    --primary-foreground: 225 40% 7%;
+
+    --secondary: 225 25% 16%;
+    --secondary-foreground: 210 20% 80%;
+
+    --muted: 225 20% 14%;
+    --muted-foreground: 215 15% 50%;
+
+    --accent: 45 95% 60%;
+    --accent-foreground: 225 40% 7%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 210 40% 98%;
+
+    --success: 145 65% 45%;
+    --success-foreground: 225 40% 7%;
+
+    --border: 225 20% 18%;
+    --input: 225 20% 18%;
+    --ring: 185 80% 55%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 225 35% 10%;
+    --sidebar-foreground: 210 20% 90%;
+    --sidebar-primary: 185 80% 55%;
+    --sidebar-primary-foreground: 225 40% 7%;
+    --sidebar-accent: 225 25% 16%;
+    --sidebar-accent-foreground: 210 20% 80%;
+    --sidebar-border: 225 20% 18%;
+    --sidebar-ring: 185 80% 55%;
+
+    --font-display: 'JetBrains Mono', monospace;
+    --font-body: 'Inter', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .glow-cyan {
+    box-shadow: 0 0 20px hsl(185 80% 55% / 0.15), 0 0 60px hsl(185 80% 55% / 0.05);
+  }
+  .glow-text {
+    text-shadow: 0 0 20px hsl(185 80% 55% / 0.4);
+  }
+  .gradient-mesh {
+    background: 
+      radial-gradient(ellipse at 20% 50%, hsl(185 80% 55% / 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, hsl(45 95% 60% / 0.04) 0%, transparent 50%),
+      hsl(var(--background));
+  }
+}

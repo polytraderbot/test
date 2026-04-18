@@ -1,0 +1,16 @@
+project_id = "rvgujmdjjdyqhahlpeao"
+
+[functions.scrape-url]
+verify_jwt = false
+
+[functions.generate-story]
+verify_jwt = false
+
+[functions.insight]
+verify_jwt = false
+
+[functions.multi-source-crawl]
+verify_jwt = false
+
+[functions.reddit-sentiment]
+verify_jwt = false
